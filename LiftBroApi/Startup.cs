@@ -27,6 +27,26 @@ namespace LiftBroApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LiftBroContext>();
+            try
+            {
+                using (var context = new LiftBroContext())
+                {
+                    context.Database.EnsureCreated();
+                    if (!context.Users.Any())
+                    {
+                        LiftBroDBInitializer.Seed(context);//<---Do your seeding here
+                        
+                    }
+
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine("An error occurred while seeding the database.");
+            }
+
 
             services.AddScoped<IUserReposetory, UserReposetory>();
 

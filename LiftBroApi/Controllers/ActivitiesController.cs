@@ -4,37 +4,34 @@ using System.Linq;
 using System.Threading.Tasks;
 using LiftBroApi.Contexts;
 using LiftBroAPI.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace LiftBroApi.Controllers
 {
+    [Produces("application/json")]
+    [Route("api/[controller]")]
+    public class ActivitiesController : Controller
+    {
+        private readonly IUserReposetory _context;
 
-        [Produces("application/json")]
-        [Route("api/Users")]
-        public class UsersController : Controller
+        public ActivitiesController(IUserReposetory context)
         {
-            private readonly IUserReposetory _context;
+            _context = context;
+        }
 
-            public UsersController(IUserReposetory context)
-            {
-                _context = context;
-            }
+        // GET: api/Users
+        [HttpGet]
+        public IEnumerable<Activity> GetUsers()
+        {
+            return _context.GetActivitys();
+        }
 
-            // GET: api/Users
-            [HttpGet]
-            public IEnumerable<User> GetUsers()
-            {
-                return _context.GetUsers();
-            }
-
-            //// GET: api/Users
-            //[HttpGet]
-            //public IEnumerable<Workout> GetWorkouts()
-            //{
-            //    return _context.GetWorkouts();
-            //}
+        //// GET: api/Users
+        //[HttpGet]
+        //public IEnumerable<Workout> GetWorkouts()
+        //{
+        //    return _context.GetWorkouts();
+        //}
 
         //// GET: api/Users/5
         //[HttpGet("{id}")]
@@ -134,4 +131,4 @@ namespace LiftBroApi.Controllers
         //    return _context.Users.Any(e => e.ActivityId == id);
         //}
     }
-    }
+}

@@ -10,8 +10,11 @@ namespace LiftBroApi.Contexts
     {
       
         IEnumerable<User> GetUsers();
+        IEnumerable<Workout> GetWorkouts();
+        IEnumerable<Exercise> GetExercises();
+        IEnumerable<Activity> GetActivitys();
 
-    void InsertUser(User user);
+        void InsertUser(User user);
 
     void Save();
 }

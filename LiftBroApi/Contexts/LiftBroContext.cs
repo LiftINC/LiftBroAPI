@@ -8,6 +8,7 @@ namespace LiftBroAPI.Entities
         {
                 
         }
+     
         public LiftBroContext(DbContextOptions<LiftBroContext> options)
             : base(options)
         { }
@@ -19,6 +20,6 @@ namespace LiftBroAPI.Entities
         public DbSet<User> Users { get; set; }
         public DbSet<Workout> Workouts { get; set; }
         public DbSet<Activity> Activities { get; set; }
-        public DbSet<Exercise> Exercises { get; set; }public DbSet<Workout> Blogs { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
     }
 }

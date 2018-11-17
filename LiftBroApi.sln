@@ -1,8 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroApi", "LiftBroApi\LiftBroApi.csproj", "{3E6880AF-E10B-469E-BBB8-92C52E60BFE2}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftBroApi", "LiftBroApi\LiftBroApi.csproj", "{3E6880AF-E10B-469E-BBB8-92C52E60BFE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroAPI.Entities", "LiftBroAPI.Entities\LiftBroAPI.Entities.csproj", "{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftBroAPI.Entities", "LiftBroAPI.Entities\LiftBroAPI.Entities.csproj", "{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftBroApi.Reposetory", "LiftBroApi.Reposetory\LiftBroApi.Reposetory.csproj", "{3541AFC1-7A84-42ED-BC9B-DE1FAF5D6968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroApi.Reposetory.EFCore", "LiftBroApi.Reposetory.EFCore\LiftBroApi.Reposetory.EFCore.csproj", "{3BF9F57E-4DD4-4203-A6D3-51D78D28D199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +25,19 @@ Global
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3541AFC1-7A84-42ED-BC9B-DE1FAF5D6968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3541AFC1-7A84-42ED-BC9B-DE1FAF5D6968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3541AFC1-7A84-42ED-BC9B-DE1FAF5D6968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3541AFC1-7A84-42ED-BC9B-DE1FAF5D6968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF9F57E-4DD4-4203-A6D3-51D78D28D199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF9F57E-4DD4-4203-A6D3-51D78D28D199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF9F57E-4DD4-4203-A6D3-51D78D28D199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF9F57E-4DD4-4203-A6D3-51D78D28D199}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {271839EF-3EF9-4FC2-AE2F-49E41A7D719C}
 	EndGlobalSection
 EndGlobal

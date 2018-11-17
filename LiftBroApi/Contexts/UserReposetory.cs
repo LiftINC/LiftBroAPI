@@ -1,8 +1,9 @@
-﻿using System;
+﻿using LiftBroAPI.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using LiftBroAPI.Entities;
+using Microsoft.EntityFrameworkCore.Extensions.Internal;
+using Microsoft.EntityFrameworkCore;
 
 namespace LiftBroApi.Contexts
 {
@@ -16,10 +17,29 @@ namespace LiftBroApi.Contexts
 
     public IEnumerable<User> GetUsers()
     {
-        return _context.Users.ToList();
-    }
 
-    public void InsertUser(User user) => _context.Users.Add(user);
+        return _context.Users
+            .Include(user => user.Workouts)
+                .ThenInclude(workouts => workouts.Exercises)
+                .ThenInclude(exercises => exercises.Activity);
+    }
+        public IEnumerable<Workout> GetWorkouts()
+        {
+            return _context.Workouts.Include(workouts => workouts.Exercises)
+                .ThenInclude(exercises => exercises.Activity);
+        }
+
+        public IEnumerable<Exercise> GetExercises()
+        {
+            return _context.Exercises.Include(x => x.Activity);
+        }
+
+        public IEnumerable<Activity> GetActivitys()
+        {
+            return _context.Activities;
+        }
+
+        public void InsertUser(User user) => _context.Users.Add(user);
 
     public void Save()
     {
@@ -45,5 +65,7 @@ namespace LiftBroApi.Contexts
         Dispose(true);
         GC.SuppressFinalize(this);
     }
-   }
+
+       
+    }
 }
