@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LiftBroApi.Contexts;
 using LiftBroAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LiftBroApi.Controllers
 {
+    using LiftBroApi.Reposetory.Interfaces;
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class ActivitiesController : Controller
     {
-        private readonly IUserReposetory _context;
+        private readonly IActivityReposetory _context;
 
-        public ActivitiesController(IUserReposetory context)
+        public ActivitiesController(IActivityReposetory context)
         {
             _context = context;
         }
 
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<Activity> GetUsers()
+        public IEnumerable<Activity> GetActivities()
         {
-            return _context.GetActivitys();
+            return _context.GetAll();
         }
 
         //// GET: api/Users

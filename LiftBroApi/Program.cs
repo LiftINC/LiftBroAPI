@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using LiftBroApi.Contexts;
 using LiftBroAPI.Entities;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -53,7 +52,8 @@ namespace LiftBroApi
                 {
                     logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
                     logging.AddConsole();
-                    
+                    logging.AddDebug();
+
                 })
                 .Build();
     }

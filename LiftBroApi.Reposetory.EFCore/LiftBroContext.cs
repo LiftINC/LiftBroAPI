@@ -1,20 +1,26 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
-namespace LiftBroAPI.Entities
+namespace LiftBroApi.Reposetory.EFCore
 {
-    public class LiftBroContext : DbContext
+    using LiftBroApi.Reposetory.EFCore.SeedingData;
+    using LiftBroAPI.Entities;
+    public class LiftBroContext :DbContext
     {
         public LiftBroContext()
         {
-                
+
         }
-     
+
         public LiftBroContext(DbContextOptions<LiftBroContext> options)
             : base(options)
         { }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=LiftBro.db");
+
         }
 
         public DbSet<User> Users { get; set; }

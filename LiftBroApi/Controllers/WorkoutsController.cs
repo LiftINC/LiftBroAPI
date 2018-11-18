@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LiftBroApi.Contexts;
+using LiftBroApi.Reposetory.Interfaces;
 using LiftBroAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,9 +12,9 @@ namespace LiftBroApi.Controllers
     [Route("api/[controller]")]
     public class WorkoutsController : Controller
     {
-        private readonly IUserReposetory _context;
+        private readonly IWorkoutReposetory _context;
 
-        public WorkoutsController(IUserReposetory context)
+        public WorkoutsController(IWorkoutReposetory context)
         {
             _context = context;
         }
@@ -23,7 +23,7 @@ namespace LiftBroApi.Controllers
         [HttpGet]
         public IEnumerable<Workout> GetWorkouts()
         {
-            return _context.GetWorkouts();
+            return _context.GetAll();
         }
 
         //// GET: api/Users

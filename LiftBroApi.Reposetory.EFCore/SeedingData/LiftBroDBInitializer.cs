@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LiftBroAPI.Entities;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LiftBroApi.Contexts
+namespace LiftBroApi.Reposetory.EFCore.SeedingData
 {
     public static class LiftBroDBInitializer
     {

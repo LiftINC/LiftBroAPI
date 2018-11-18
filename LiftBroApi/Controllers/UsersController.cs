@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LiftBroApi.Contexts;
+using LiftBroApi.Reposetory.Interfaces;
 using LiftBroAPI.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +26,7 @@ namespace LiftBroApi.Controllers
             [HttpGet]
             public IEnumerable<User> GetUsers()
             {
-                return _context.GetUsers();
+                return _context.GetAll();
             }
 
             //// GET: api/Users

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LiftBroApi.Contexts
+namespace LiftBroApi.Reposetory.EFCore.SeedingData
 {
     public class LiftBroSeed
     {
