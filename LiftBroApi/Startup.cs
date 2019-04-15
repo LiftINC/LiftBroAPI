@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LiftBroApi.Settings;
 using LiftBroAPI.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,9 +27,13 @@ namespace LiftBroApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<LiftBroContext>
-                (options => options.UseSqlServer(connection));
+            services.Configure<MongoSettings>(options =>
+            {
+                options.ConnectionString 
+                    = Configuration.GetSection("MongoConnection:ConnectionString").Value;
+                options.Database 
+                    = Configuration.GetSection("MongoConnection:Database").Value;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

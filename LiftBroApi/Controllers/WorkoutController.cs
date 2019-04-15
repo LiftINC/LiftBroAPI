@@ -19,49 +19,92 @@ namespace LiftBroApi.Controllers
             {
                 new Workout()
                 {
-                    Id = 1,
+                   
                     Name = "Workout 1",
                     Exercises = new List<Exercise>()
                     {
                         new Exercise()
                         {
-                            Id = 2,
+                            
                             Repitations = 5,
                             Sets = 3,
                             Weight = 50,
                             Activity = new Activity()
                             {
-                                Id = 1,
+                                
                                 Name = "Squats"
                             }
                         },
                         new Exercise()
                         {
-                            Id = 1,
+                           
                             Repitations = 5,
                             Sets = 3,
                             Weight = 50,
                             Activity = new Activity()
                             {
-                                Id = 2,
+                                
                                 Name = "BenchPress"
                             }
                         },
                         new Exercise()
                         {
-                            Id = 1,
+                            
                             Repitations = 5,
                             Sets = 3,
                             Activity = new Activity()
                             {
-                                Id = 3,
+                                Name = "Pushups"
+                            }
+                        }
+                    }
+                },
+                new Workout()
+                {
+                    
+                    Name = "Workout 2",
+                    Exercises = new List<Exercise>()
+                    {
+                        new Exercise()
+                        {
+                            
+                            Repitations = 5,
+                            Sets = 3,
+                            Weight = 50,
+                            Activity = new Activity()
+                            {
+                                
+                                Name = "Squats"
+                            }
+                        },
+                        new Exercise()
+                        {
+                            
+                            Repitations = 5,
+                            Sets = 3,
+                            Weight = 50,
+                            Activity = new Activity()
+                            {
+                                
+                                Name = "BenchPress"
+                            }
+                        },
+                        new Exercise()
+                        {
+                            
+                            Repitations = 5,
+                            Sets = 3,
+                            Activity = new Activity()
+                            {
+                                
                                 Name = "Pushups"
                             }
                         }
                     }
                 }
-
             };
+
+
         }
         
 

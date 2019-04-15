@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroApi", "LiftBroApi\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroAPI.Entities", "LiftBroAPI.Entities\LiftBroAPI.Entities.csproj", "{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftBroApi.DB", "LiftBroApi.DB\LiftBroApi.DB.csproj", "{2BF5D876-A601-48FB-9FF6-B5436DE1DFEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FB1D9B3-381B-47B4-A747-F06A19D60E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF5D876-A601-48FB-9FF6-B5436DE1DFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF5D876-A601-48FB-9FF6-B5436DE1DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF5D876-A601-48FB-9FF6-B5436DE1DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF5D876-A601-48FB-9FF6-B5436DE1DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
