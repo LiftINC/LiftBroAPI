@@ -2,9 +2,12 @@
 
 namespace LiftBroAPI.Entities
 {
-    public class Activity    
+    using LiftBroAPI.Entities.Models;
+    using System.ComponentModel.DataAnnotations;
+    public class Activity: IEntity
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
+        
         public string Name { get; set; }
     }
 }
